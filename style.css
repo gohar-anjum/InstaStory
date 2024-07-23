@@ -7,3 +7,49 @@ html, body{
     width: 100%;
     height: 100%;
 }
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(79, 85, 83, 0.87);
+}
+#nav{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#nav #stories{
+    padding: 10px;
+    height: 80px;
+    width: 100%;
+    border-bottom: 1px solid #dadada;
+}
+#nav::-webkit-scrollbar{
+    display: none;
+}
+.story{
+    cursor: pointer;
+    margin-left: 5px;
+    display: inline-block;
+}
+.story img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2.8px solid rgb(192, 49, 49);
+}
+#storyopened{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    display: none;
+}
