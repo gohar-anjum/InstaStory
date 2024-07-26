@@ -14,7 +14,7 @@ arr.forEach(function(val, index){
 })
 
 document.querySelector("#stories").innerHTML=clutter;
-
+var grow=0
 //click event
 document.querySelector("#stories").addEventListener("click", function(funcval){
         document.querySelector("#storyopened").style.display="initial"
@@ -23,4 +23,14 @@ document.querySelector("#stories").addEventListener("click", function(funcval){
         setTimeout(function(){
             document.querySelector("#storyopened").style.display=`none`  
         },3000)
+
+        if(grow<100)
+        {
+            setInterval(function(){
+                document.querySelector(".bar").style.width= `${grow}%`
+                grow++
+            },30)
+        }else{
+            grow=0
+        }
     })
