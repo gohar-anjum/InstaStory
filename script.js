@@ -19,4 +19,8 @@ document.querySelector("#stories").innerHTML=clutter;
 document.querySelector("#stories").addEventListener("click", function(funcval){
         document.querySelector("#storyopened").style.display="initial"
         document.querySelector("#storyopened").style.backgroundImage= `url("${arr[funcval.target.id].mstory}")`
+
+        setTimeout(function(){
+            document.querySelector("#storyopened").style.display=`none`  
+        },3000)
     })
